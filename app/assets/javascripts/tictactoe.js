@@ -9,6 +9,7 @@ const solutions = [
   [3,4,5],
   [6,7,8]
 ]
+<<<<<<< HEAD
 var turnCount = 0;
 var thisGame = 0;
 
@@ -56,17 +57,42 @@ var setMessage = function(someString) {
 }
 
 var checkWinner = function(){
+=======
+let turnCount = 0;
+let thisGame = 0;
+
+let player = function() {
+  turnCount % 2 ? 'X' : 'O'
+}
+
+let updateState = function(box) {
+   let marker = player()
+   $(box).text(marker)
+}
+
+let setMessage = function(someString) {
+  $(#message).innerHTML(someString)
+
+}
+
+let checkWinner = function(){
+>>>>>>> 1d245a339e35cbdd18d1ed9ea9a9c3e60a2eb232
   var board = {};
     var winner = false;
 
     $('td').text((index, square) => board[index] = square);
 
+<<<<<<< HEAD
     solutions.some(function(combo) {
+=======
+    WINNING_COMBOS.some(function(combo) {
+>>>>>>> 1d245a339e35cbdd18d1ed9ea9a9c3e60a2eb232
       if (board[combo[0]] !== "" && board[combo[0]] === board[combo[1]] && board[combo[1]] === board[combo[2]]) {
         setMessage(`Player ${board[combo[0]]} Won!`);
         return winner = true;
       }
   });
+<<<<<<< HEAD
 }
 
   function resetBoard() {
@@ -105,3 +131,7 @@ function showPreviousGames(){
     }
   })
 }
+=======
+
+let
+>>>>>>> 1d245a339e35cbdd18d1ed9ea9a9c3e60a2eb232
